@@ -55,7 +55,7 @@ const HeroSection = () => {
 
           {/* Description */}
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-2">
-          Pour la premiere fois a Casablanca 3 nuits de show fusion Aïta × Pop
+          Pour la premiere fois à Casablanca 3 nuits de show fusion Aïta & Pop
           </p>
 
           {/* Countdown */}

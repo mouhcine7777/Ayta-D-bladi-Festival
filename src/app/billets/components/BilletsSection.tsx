@@ -43,25 +43,25 @@ const TicketsPage = () => {
       id: 1,
       name: "Tickets.ma",
       logo: "/logos/ticketma.png",
-      url: "https://www.ticket.ma/ticket/festivals/3805/ayta-dbladi-pass-3-jours-2025"
+      url: "https://www.ticket.ma/ticket/ayta-dbladi"
     },
     {
       id: 2,
       name: "Guichet.com",
       logo: "/logos/guichet.png",
-      url: "https://guichet.com/ma-fr/event/concerts/ayta-dbladi-pass-3-jours-5014"
+      url: "https://guichet.com/ma-fr/event/producer/ayta-dbladi"
     },
     {
       id: 3,
       name: "Events.ma",
       logo: "/logos/events.png",
-      url: "https://events.ma/concerts-festivals/ayta-dbladi-pass-3-jours"
+      url: "https://events.ma/ayta-dbladi"
     },
     {
       id: 4,
       name: "wanaut.com",
       logo: "/logos/wanaut.png",
-      url: "https://www.wanaut.com/a/ayta-dbladi-pass-3-jours/ "
+      url: "https://www.wanaut.com/a/ayta-dbladi-pass-3-jours/"
     }
   ];
 
