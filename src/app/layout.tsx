@@ -79,6 +79,64 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://aytadbladi.com" />
         
+        {/* Google Tag Manager */}
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-MXRVTDH8');
+            `,
+          }}
+        />
+        {/* End Google Tag Manager */}
+        
+        {/* Google Ads (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-432514164"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-ads"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-432514164');
+            `,
+          }}
+        />
+        
+        {/* Google Ads Conversion Tracking */}
+        <Script
+          id="google-ads-conversion"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              function gtag_report_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-432514164/GcUtCNfCnqkbEPTIns4B',
+                    'transaction_id': '',
+                    'event_callback': callback
+                });
+                return false;
+              }
+            `,
+          }}
+        />
+        {/* End Google Ads */}
+        
         {/* Meta Pixel Code */}
         <Script
           id="meta-pixel"
@@ -133,6 +191,17 @@ export default function RootLayout({
         />
       </head>
       <body className={`${montserrat.variable} antialiased`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MXRVTDH8"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+        
         {children}
         <GoogleAnalytics gaId="G-DMV8HSTR9V" />
       </body>

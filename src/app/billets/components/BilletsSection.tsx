@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Script from 'next/script';
 
 const TicketsPage = () => {
   const [hoveredPlatform, setHoveredPlatform] = useState<number | null>(null);
@@ -15,6 +16,21 @@ const TicketsPage = () => {
         'event_category': 'ticket_purchase',
         'event_label': platformName,
         'value': 1
+      });
+      
+      // Google Ads Conversion Tracking
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-432514164/GcUtCNfCnqkbEPTIns4B',
+        'transaction_id': ''
+      });
+    }
+    
+    // TikTok Pixel event tracking
+    if (typeof window !== 'undefined' && window.ttq) {
+      window.ttq.track('ClickButton', {
+        content_name: platformName,
+        content_category: 'ticket_platform',
+        value: platformUrl
       });
     }
     
@@ -59,7 +75,7 @@ const TicketsPage = () => {
     },
     {
       id: 4,
-      name: "wanaut.com",
+      name: "wanaut.com", 
       logo: "/logos/wanaut.png",
       url: "https://www.wanaut.com/a/ayta-dbladi-pass-3-jours/"
     }
@@ -67,6 +83,19 @@ const TicketsPage = () => {
 
   return (
     <>
+      {/* TikTok Pixel Code */}
+      <Script id="tiktok-pixel" strategy="afterInteractive">
+        {`
+          !function (w, d, t) {
+            w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+          var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+          ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+            ttq.load('D3J81GRC77U2RE92UOU0');
+            ttq.page();
+          }(window, document, 'ttq');
+        `}
+      </Script>
+
       {/* Add the styles in the head */}
       <style jsx global>{`
         @keyframes float {
@@ -134,7 +163,7 @@ const TicketsPage = () => {
               {/* Creative floating circular layout */}
               <div className="relative max-w-6xl mx-auto">
 
-                {/* Platforms in creative arrangement */}
+                {/* Platforms in creative arrangement */} 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
                   {platforms.map((platform, index) => (
                     <a
@@ -246,6 +275,12 @@ const TicketsPage = () => {
                             'value': 1
                           });
                         }
+                        if (typeof window !== 'undefined' && window.ttq) {
+                          window.ttq.track('ClickButton', {
+                            content_name: 'Contact Button',
+                            content_category: 'navigation'
+                          });
+                        }
                       }}
                     >
                       <span className="relative z-10">CONTACT</span>
@@ -268,10 +303,15 @@ const TicketsPage = () => {
   );
 };
 
-// Add TypeScript declaration for gtag
+// Add TypeScript declaration for gtag and ttq
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
+    ttq: {
+      track: (event: string, params?: any) => void;
+      page: () => void;
+      load: (id: string) => void;
+    };
   }
 }
 
