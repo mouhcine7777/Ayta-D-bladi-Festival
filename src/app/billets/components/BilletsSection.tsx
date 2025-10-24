@@ -57,7 +57,7 @@ const TicketsPage = () => {
   const platforms = [
     {
       id: 1,
-      name: "Tickets.ma",
+      name: "Ticket.ma",
       logo: "/logos/ticketma.png",
       url: "https://www.ticket.ma/ticket/ayta-dbladi"
     },
@@ -151,7 +151,7 @@ const TicketsPage = () => {
             </div>
 
             {/* Ticketing Platforms - Big Focus */}
-            <div className="mb-16">
+            <div className="mb-24">
               <h2 className="text-4xl md:text-6xl font-black text-center mb-6" style={{ color: '#FFE5C0' }}>
                 ACHETEZ VOS BILLETS
               </h2>
@@ -250,50 +250,57 @@ const TicketsPage = () => {
               </div>
             </div>
 
-            {/* Call to Action */}
-            <div className="text-center">
-              <div className="max-w-4xl mx-auto p-8 rounded-3xl mb-8" style={{ background: 'linear-gradient(145deg, #2a1612, #1a0f0a)' }}>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: '#FFE5C0' }}>
-                  Prêt pour l&apos;aventure ?
-                </h3>
-                <p className="text-white/80 text-lg mb-6">
-                  Ne manquez pas cette célébration exceptionnelle de la musique traditionnelle marocaine
-                </p>
-                <div className="flex justify-center">
-                  <Link href="/contact">
-                    <button 
-                      className="group relative px-8 py-4 rounded-full text-white font-bold text-lg transition-all duration-500 hover:scale-105 overflow-hidden"
-                      style={{ 
-                        background: 'linear-gradient(135deg, #B06203, #812216)',
-                        boxShadow: '0 12px 40px rgba(176, 98, 3, 0.4)'
-                      }}
-                      onClick={() => {
-                        if (typeof window !== 'undefined' && window.gtag) {
-                          window.gtag('event', 'click_contact_button', {
-                            'event_category': 'navigation',
-                            'event_label': 'tickets_page_contact',
-                            'value': 1
-                          });
-                        }
-                        if (typeof window !== 'undefined' && window.ttq) {
-                          window.ttq.track('ClickButton', {
-                            content_name: 'Contact Button',
-                            content_category: 'navigation'
-                          });
-                        }
-                      }}
-                    >
-                      <span className="relative z-10">CONTACT</span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                    </button>
-                  </Link>
-                </div>
-              </div>
+            {/* Concept Section */}
+            <div className="mb-16 mt-32 lg:mt-32">
+              <div className="max-w-6xl mx-auto">
+                <div 
+                  className="relative rounded-3xl overflow-visible p-8 lg:p-12 backdrop-blur-xl border border-amber-400/30 shadow-2xl"
+                  style={{ 
+                    background: 'linear-gradient(135deg, #CD853F, #DEB887, #D2691E)'
+                  }}
+                >
+                  <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    {/* Left Content */}
+                    <div className="space-y-4">
+                      <div className="space-y-3 text-gray-900 text-sm md:text-base leading-relaxed">
+                        <p className="font-boowie font-bold text-lg md:text-xl text-gray-800">
+                          Un concept inédit au Maroc
+                        </p>
+                        <p className="font-medium">
+                          l'Aïta, patrimoine vivant, rencontre la pop et la scène actuelle à travers des fusions exclusives. Une fusion intergénérationnelle qui met en avant la richesse culturelle marocaine dans une forme contemporaine.
+                        </p>
+                        <p className="font-medium">
+                          Pendant trois soirées à Casablanca, les maîtres de l'Aïta partageront la scène avec des artistes d'aujourd'hui pour offrir un show unique, entre transmission et modernité.
+                        </p>
+                      </div>
+                      
+                      <Link 
+                        href="/line-up"
+                        className="font-boowie inline-block mt-6 px-8 py-3 rounded-full font-bold text-base md:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                        style={{
+                          backgroundColor: '#812216',
+                          color: '#FFE5C0',
+                          boxShadow: '0 4px 15px rgba(129, 34, 22, 0.3)'
+                        }}
+                      >
+                        DÉCOUVRIR LE LINE-UP
+                      </Link>
+                    </div>
 
-              {/* Footer Info */}
-              <div className="text-white/60 text-sm">
-                <p>Questions ? Contactez-nous au contact@aytadbladi.com</p>
-                <p className="mt-2">Paiement sécurisé • Billets électroniques • Service client 24/7</p>
+                    {/* Right Image - Bigger on mobile, Overflowing on Desktop */}
+                    <div className="relative lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-3/5 lg:pr-8">
+                      <div className="relative lg:translate-x-16 -mx-8 sm:mx-0">
+                        <Image 
+                          src="/artistes.png"
+                          alt="Les Artistes"
+                          width={800}
+                          height={800}
+                          className="w-full h-auto object-contain drop-shadow-2xl scale-125 sm:scale-100 lg:scale-120"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -315,4 +322,4 @@ declare global {
   }
 }
 
-export default TicketsPage;
+export default TicketsPage; 

@@ -2,7 +2,8 @@
 'use client'
 
 import HeaderSection from "../components/HeaderSection";
-import FestivalSection from "./components/FestivalSection";
+import ExperienceHero from "./components/ExperienceHero";
+import ExperienceSection from "./components/ExperienceSection";
 import FooterSection from "../components/FooterSection";
 
 
@@ -12,7 +13,8 @@ export default function Home() {
   return (
     <main>
         <HeaderSection />
-      <FestivalSection />
+        <ExperienceHero />
+        <ExperienceSection />
       <FooterSection />
     </main>
   );

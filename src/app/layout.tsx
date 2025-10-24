@@ -3,10 +3,21 @@ import { Montserrat } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Script from 'next/script';
 import "./globals.css";
+import localFont from "next/font/local";
+
 
 const montserrat = Montserrat({
   variable: "--font-sans",
   subsets: ["latin"],
+});
+
+const boowie = localFont({
+  src: "/fonts/Boowie.ttf",
+  variable: "--font-boowie",
+});
+const austin = localFont({
+  src: "/fonts/Austin.ttf",
+  variable: "--font-austin",
 });
 
 export const metadata: Metadata = {
@@ -18,7 +29,7 @@ export const metadata: Metadata = {
     "Aïta marocaine", 
     "fusion Aïta Pop",
     "Aïta × Pop",
-    "fusion musicale",
+    "fusion   usicale",
     "pop moderne",
     "show musical",
     "concert",
@@ -190,7 +201,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${montserrat.variable} antialiased`}>
+      <body className={`${montserrat.variable} ${boowie.variable} ${austin.variable}  antialiased`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

@@ -28,7 +28,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-white/80 text-lg leading-relaxed mb-6 max-w-md">
-            Pour la première fois au Maroc, vivez trois nuits de show inédit où l’Aïta ancestrale fusionne avec la Pop moderne. Un rendez-vous explosif, entre héritage et spectacle, à ne pas manquer !
+            Pour la première fois au Maroc, vivez trois nuits de show inédit où l'Aïta ancestrale fusionne avec la Pop moderne. Un rendez-vous explosif, entre héritage et spectacle, à ne pas manquer !
             </p>
             <div className="flex flex-wrap gap-4">
               <div 
@@ -59,8 +59,8 @@ const Footer = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-1">Casablanca</h4>
-                  <p className="text-white/70 text-sm">Maroc</p>
+                  <h4 className="font-semibold text-white mb-1">Les Jardins de la Cathédrale Sacré-Coeur</h4>
+                  <p className="text-white/70 text-sm">Casablanca, Maroc</p>
                 </div>
               </div>
             </div>

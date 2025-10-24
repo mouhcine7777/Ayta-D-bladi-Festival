@@ -70,7 +70,7 @@ const LineupPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           {/* Hero Header */}
           <div className="text-center mb-8 md:mb-12 lg:mb-16">
-            <h1 className="text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 md:mb-12 lg:mb-6 tracking-wide animate-fadeIn"
+            <h1 className="font-boowie text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 md:mb-12 lg:mb-6 tracking-wide animate-fadeIn"
                 style={{ color: '#FFE5C0', textShadow: '0 0 40px rgba(176, 98, 3, 0.3)' }}>
               PROGRAMMATION
             </h1>
@@ -125,7 +125,7 @@ const LineupPage = () => {
                       <span className="text-white font-black text-xl md:text-2xl">J{dayNum}</span>
                     </div>
                     <div className="flex-grow text-center sm:text-left">
-                      <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#FFE5C0' }}>
+                      <h2 className="font-boowie text-2xl md:text-3xl font-bold" style={{ color: '#FFE5C0' }}>
                         Jour {dayNum} - {dayNum === 1 ? '13 Nov' : dayNum === 2 ? '14 Nov' : '15 Nov'}
                       </h2>
                       <div className="h-1 w-full rounded-full mt-2" 
@@ -164,10 +164,10 @@ const LineupPage = () => {
 
                         {/* Content */}
                         <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 z-20 pb-6 md:pb-8">
-                          <p className="text-xs md:text-sm font-semibold mb-3" style={{ color: '#B06203' }}>
+                          <p className="font-austin text-xs md:text-3xl font-semibold mb-3" style={{ color: '#B06203' }}>
                             {artist.genre}
                           </p>
-                          <h3 className="text-xl md:text-2xl font-black text-white mb-2">
+                          <h3 className="font-boowie text-xl md:text-2xl font-black text-white mb-2">
                             {artist.name}
                           </h3>
                         </div>

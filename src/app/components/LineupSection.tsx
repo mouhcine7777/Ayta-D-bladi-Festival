@@ -176,7 +176,7 @@ const LineupSection = () => {
         {/* Section Title */}
         <div className="text-center mb-12 md:mb-16">
           <div className="relative inline-block">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-6 tracking-wide" style={{ color: '#FFE5C0' }}>
+            <h2 className="font-boowie text-4xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-6 tracking-wide" style={{ color: '#FFE5C0' }}>
               PROGRAMMATION
             </h2>
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 rounded-full" style={{ backgroundColor: '#B06203' }}></div>
@@ -306,7 +306,7 @@ const LineupSection = () => {
                       
                       {/* Artist Name Overlay */}
                       <div className="absolute bottom-8 left-6 right-6">
-                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black leading-tight uppercase"
+                        <h3 className="font-boowie text-xl md:text-2xl lg:text-3xl font-black leading-tight uppercase"
                             style={{ 
                               color: '#FFE5C0',
                             }}>

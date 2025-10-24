@@ -64,7 +64,8 @@ const ContactPage = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-white text-lg mb-1">Adresse</h3>
-                <p className="text-white/70">Casablanca, Maroc</p>
+                <p className="text-white/70">Les Jardins de la Cathédrale Sacré-Coeur</p>
+                <p className="text-white/60 text-sm">Casablanca, Maroc</p>
               </div>
             </div>
 
@@ -118,7 +119,7 @@ const ContactPage = () => {
             <div className="h-96 w-full bg-gray-200 relative">
               {/* Embedded Google Map */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.349434048954!2d-7.614915184797193!3d33.59359698073276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d3731f83c5c3%3A0x9f5f7f5a4b5f5f5f!2sParc%20du%20V%C3%A9lodrome%2C%20Casablanca%2C%20Morocco!5e0!3m2!1sen!2sus!4v1633456789012!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.046662586099!2d-7.624407799999999!3d33.591158199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d291010717e5%3A0x1f76295a86bb2f25!2zw4lnbGlzZSBkdSBTYWNyw6ktQ8WTdXI!5e1!3m2!1sfr!2sma!4v1760124845778!5m2!1sfr!2sma"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -130,15 +131,15 @@ const ContactPage = () => {
               
               {/* Map Overlay Info */}
               <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-xs">
-                <h3 className="font-bold text-lg" style={{ color: '#812216' }}>Casablanca</h3>
-                <p className="text-sm text-gray-700 mt-1">Maroc</p>
+                <h3 className="font-bold text-lg" style={{ color: '#812216' }}>Les Jardins de la Cathédrale Sacré-Coeur</h3>
+                <p className="text-sm text-gray-700 mt-1">Casablanca, Maroc</p>
               </div>
             </div>
             
             {/* Directions Button */}
             <div className="p-6" style={{ backgroundColor: 'rgba(255, 229, 192, 0.05)' }}>
               <a 
-                href="https://www.google.com/maps/dir//Parc+du+V%C3%A9lodrome,+Casablanca,+Morocco"
+                href="https://www.google.com/maps/dir//Église+du+Sacré-Cœur,+Casablanca,+Morocco"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-3 px-6 rounded-full text-white font-bold transition-all duration-300 hover:scale-105"
