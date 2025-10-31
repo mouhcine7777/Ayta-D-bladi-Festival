@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 
 const vipTickets = [
   {
@@ -32,7 +30,7 @@ const vipTickets = [
     title: "Soirée 15 Novembre — Table Privative (6 pers.)",
     image: "/afichesoiree3table.jpg",
     link: "https://guichet.com/ma-fr/event/concerts/ayta-dbladi-soiree-15-novembre-tables-vip-5173",
-  },
+  }
 ];
 
 const VipTicketsSection = () => {
@@ -60,10 +58,77 @@ const VipTicketsSection = () => {
           </p>
         </div>
 
+        {/* VIP Experiences Info Boxes */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {/* VIP Devant la Scène */}
+          <div className="bg-[#2b1911] border-2 border-[#B06203] rounded-2xl p-8">
+            <h3
+              className="font-boowie text-2xl md:text-3xl font-bold mb-6"
+              style={{ color: "#FFE5C0" }}
+            >
+              VIP Devant la Scène
+            </h3>
+            <ul className="space-y-3 text-white/80">
+              <li className="flex items-start gap-3">
+                <span className="text-[#B06203] text-xl mt-1">✓</span>
+                <span>Emplacement privilégié autour de la scène principale</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#B06203] text-xl mt-1">✓</span>
+                <span>Ambiance chic et festive au cœur du show</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#B06203] text-xl mt-1">✓</span>
+                <span>Accès à l'espace food</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#B06203] text-xl mt-1">✓</span>
+                <span>Découverte du musée éphémère retraçant l'histoire et la mémoire de l'Aïta</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#B06203] text-xl mt-1">✓</span>
+                <span>Animations folkloriques immersives au cœur du village</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Table VIP */}
+          <div className="bg-[#2b1911] border-2 border-[#B06203] rounded-2xl p-8">
+            <h3
+              className="font-boowie text-2xl md:text-3xl font-bold mb-6"
+              style={{ color: "#FFE5C0" }}
+            >
+              Table Privative (6 personnes)
+            </h3>
+            <ul className="space-y-3 text-white/80">
+              <li className="flex items-start gap-3">
+                <span className="text-[#B06203] text-xl mt-1">✓</span>
+                <span>Table privative pour 6 personnes</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#B06203] text-xl mt-1">✓</span>
+                <span>Emplacement premium dans l'espace VIP</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#B06203] text-xl mt-1">✓</span>
+                <span>Ambiance élégante et conviviale au cœur du show</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#B06203] text-xl mt-1">✓</span>
+                <span>Accès à l'espace food et au musée éphémère de l'Aïta</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#B06203] text-xl mt-1">✓</span>
+                <span>Animations folkloriques et ambiance du village</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         {/* VIP Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {vipTickets.map((ticket, index) => (
-            <Link
+            <a
               key={index}
               href={ticket.link}
               target="_blank"
@@ -72,11 +137,10 @@ const VipTicketsSection = () => {
             >
               {/* Image */}
               <div className="relative aspect-square w-full bg-black">
-                <Image
+                <img
                   src={ticket.image}
                   alt={ticket.title}
-                  fill
-                  className="object-contain transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
 
@@ -99,7 +163,7 @@ const VipTicketsSection = () => {
                   RÉSERVER
                 </button>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>

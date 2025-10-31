@@ -35,17 +35,15 @@ const SponsorSection = () => {
           >
             PARTENAIRE OFFICIEL
           </h2>
-          
-          {/* Subtitle */}
-          <p 
-            className="text-sm md:text-base lg:text-lg text-white/70 mb-8 md:mb-12 max-w-2xl mx-auto"
-          >
-            Merci à notre partenaire qui rend possible cette célébration unique de l'Aïta
-          </p>
 
           {/* Logo Container */}
           <div className="flex justify-center items-center">
-            <div className="relative group">
+            <a 
+              href="https://somathes.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer"
+            >
               {/* Glow Effect */}
               <div 
                 className="absolute inset-0 blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500 rounded-full"
@@ -55,15 +53,15 @@ const SponsorSection = () => {
               {/* Logo */}
               <div className="relative">
                 <Image 
-                  src="/logo.png"
+                  src="/dahmis.png"
                   alt="Sponsor Logo"
-                  width={600}
-                  height={400}
-                  className="w-auto h-auto max-w-[250px] md:max-w-[350px] lg:max-w-[450px] object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
+                  width={500}
+                  height={300}
+                  className="w-auto h-auto max-w-[250px] md:max-w-[350px] lg:max-w-[350px] object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
                   priority
                 />
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
