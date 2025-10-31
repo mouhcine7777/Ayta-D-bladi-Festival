@@ -37,6 +37,7 @@
       { name: 'ACCUEIL', href: '/' },
       { name: 'LINEUP', href: '/line-up' },
       { name: 'EXPÉRIENCE', href: '/experience' },
+      { name: 'ESPACES VIP', href: '/vip' },
       { name: 'CONTACT', href: '/contact' }
     ];
 
