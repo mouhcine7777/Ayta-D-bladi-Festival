@@ -7,7 +7,7 @@ const ExperienceHero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/cathedrale.jpg')"
+          backgroundImage: "url('/complex.jpg')"
         }}
       >
         {/* Dark Overlay */}
@@ -25,7 +25,7 @@ const ExperienceHero = () => {
               textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)'
             }}
           >
-            Une expérience unique au coeur des Jardins de la Cathédrale Sacré-Coeur
+            Une expérience majestueuse à casablanca au coeur de la grande salle couverte du complexe mohammed v.
           </h1>
 
           {/* Subtitle */}
@@ -36,7 +36,7 @@ const ExperienceHero = () => {
               textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)'
             }}
           >
-            Musique, mémoire et émotions — là où le patrimoine rencontre la création.
+            Musique, mémoire et émotions — Là où toutes les générations se réunissent sous un même toit pour célébrer la puissance du patrimoine.
           </p>
         </div>
       </div>

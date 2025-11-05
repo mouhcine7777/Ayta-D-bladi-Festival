@@ -21,9 +21,9 @@ const VillageFestivalSection = () => {
     },
     {
       id: 3,
-      title: "L’Espace Scénique",
-      description: "Une scène centrale entourée de lumière et de public, où les plus grandes voix populaires se rencontrent",
-      image: "/espace.jpg",
+      title: "La scène des grandes voix",
+      description: "Un lieu conçu pour l'intensité et l'émotion pure, où la lumière et le son magnifient les plus grandes voix populaires au plus près de leur public.",
+      image: "/complex.jpg",
       color: "#DC143C"
     }
   ];
@@ -41,7 +41,7 @@ const VillageFestivalSection = () => {
           </h2>
           <br></br>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light leading-relaxed" >
-            Entre les palmiers et les murs immaculés de la Cathédrale Sacré-Cœur, le festival s'installe dans un cadre patrimonial exceptionnel
+          Au cœur de la Grande Salle Couverte du Complexe Mohammed V, le festival s'installe dans un espace spacieux, entièrement aménagé pour vivre une expérience complète et inédite.
           </p>
         </div>
 

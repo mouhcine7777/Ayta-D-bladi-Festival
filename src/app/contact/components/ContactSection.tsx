@@ -64,7 +64,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-white text-lg mb-1">Adresse</h3>
-                <p className="text-white/70">Les Jardins de la Cathédrale Sacré-Coeur</p>
+                <p className="text-white/70"> Salle Couverte Complexe Sportif Mohammed V</p>
                 <p className="text-white/60 text-sm">Casablanca, Maroc</p>
               </div>
             </div>
@@ -110,6 +110,17 @@ const ContactPage = () => {
                     <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.10-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
                   </svg>
                 </a>
+                <a 
+                  href="https://www.youtube.com/@AytadBladi" 
+                  className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  style={{ 
+                    background: 'linear-gradient(135deg, #B06203, #812216)'
+                  }}
+                >
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -119,7 +130,7 @@ const ContactPage = () => {
             <div className="h-96 w-full bg-gray-200 relative">
               {/* Embedded Google Map */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.046662586099!2d-7.624407799999999!3d33.591158199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d291010717e5%3A0x1f76295a86bb2f25!2zw4lnbGlzZSBkdSBTYWNyw6ktQ8WTdXI!5e1!3m2!1sfr!2sma!4v1760124845778!5m2!1sfr!2sma"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6318.9988046746885!2d-7.651693104163074!3d33.5802191886233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d39f83c32281%3A0x20d552e80e1130ed!2sMohammed%20V%20olimpique%20area!5e1!3m2!1sfr!2sma!4v1762274052370!5m2!1sfr!2sma"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -131,7 +142,7 @@ const ContactPage = () => {
               
               {/* Map Overlay Info */}
               <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-xs">
-                <h3 className="font-bold text-lg" style={{ color: '#812216' }}>Les Jardins de la Cathédrale Sacré-Coeur</h3>
+                <h3 className="font-bold text-lg" style={{ color: '#812216' }}> Salle Couverte Complexe Sportif Mohammed V</h3>
                 <p className="text-sm text-gray-700 mt-1">Casablanca, Maroc</p>
               </div>
             </div>
@@ -139,7 +150,7 @@ const ContactPage = () => {
             {/* Directions Button */}
             <div className="p-6" style={{ backgroundColor: 'rgba(255, 229, 192, 0.05)' }}>
               <a 
-                href="https://www.google.com/maps/dir//Église+du+Sacré-Cœur,+Casablanca,+Morocco"
+                href="https://maps.app.goo.gl/APJBSKcVKReyvK8Q7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-3 px-6 rounded-full text-white font-bold transition-all duration-300 hover:scale-105"

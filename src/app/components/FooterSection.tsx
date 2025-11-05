@@ -59,7 +59,7 @@ const Footer = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-1">Les Jardins de la Cathédrale Sacré-Coeur</h4>
+                  <h4 className="font-semibold text-white mb-1">Salle Couverte Complexe Sportif Mohammed V</h4>
                   <p className="text-white/70 text-sm">Casablanca, Maroc</p>
                 </div>
               </div>
@@ -124,6 +124,23 @@ const Footer = () => {
                   </svg>
                 </div>
                 <span className="font-medium">@aytadbladi</span>
+              </a>
+                            {/* YouTube */}
+                            <a 
+                href="https://www.youtube.com/@AytadBladi" 
+                className="flex items-center gap-4 text-white/80 hover:text-white transition-all duration-300 hover:scale-105 group"
+              >
+                <div 
+                  className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                  style={{ 
+                    background: 'linear-gradient(135deg, #B06203, #812216)'
+                  }}
+                >
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </div>
+                <span className="font-medium">Ayta D&apos;Bladi</span>
               </a>
             </div>
           </div>

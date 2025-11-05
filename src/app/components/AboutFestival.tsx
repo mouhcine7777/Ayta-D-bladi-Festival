@@ -16,7 +16,7 @@ const FestivalSection = () => {
             <div className="grid grid-cols-2 gap-4 md:gap-6">
               <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden shadow-lg transform transition-all duration-500 hover:-translate-y-1">
                 <Image 
-                  src="/cathedrale.jpg" 
+                  src="/complex.jpg" 
                   alt="Traditional Moroccan musicians performing"
                   className="w-full h-full object-cover"
                   width={400}
@@ -81,7 +81,7 @@ la richesse culturelle marocaine dans une forme contemporaine.
                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                   </svg>
                   <p className="text-sm md:text-base font-semibold" style={{ color: '#812216' }}>
-                    Les Jardins de la Cathédrale Sacré-Coeur
+                  Salle Couverte Complexe Sportif Mohammed V Casablanca
                   </p>
                 </div>
               </div>
