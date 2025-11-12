@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 const SponsorSection = () => {
+  const scrollRef = useRef(null);
+
   const mediaPartners = [
     { name: '2M', logo: '/media-logos/2m.png', isPrimary: true },
     { name: 'Medi1', logo: '/media-logos/medi1.png', isPrimary: true },
@@ -14,10 +16,56 @@ const SponsorSection = () => {
     { name: 'Nouveliste', logo: '/media-logos/nouveliste.png', isPrimary: false },
     { name: 'Feed', logo: '/media-logos/feed.png', isPrimary: false },
     { name: 'Infomediaire', logo: '/media-logos/infomediaire.png', isPrimary: false },
-    { name: "L'Informat'Heure", logo: '/media-logos/informatheure.png', isPrimary: false }
+    { name: "L'Informat'Heure", logo: '/media-logos/informatheure.png', isPrimary: false },
+    { name: "Euro Media", logo: '/media-logos/euromedia.png', isPrimary: false }
   ];
 
-  // Create a doubled array for seamless infinite scroll
+  useEffect(() => {
+    const scrollContent = scrollRef.current;
+    if (!scrollContent) return;
+
+    let scrollPosition = 0;
+    let animationId;
+    let isPaused = false;
+
+    const scroll = () => {
+      if (!isPaused) {
+        scrollPosition += 0.5; // Speed of scroll
+        
+        // Get the width of one complete set of logos
+        const firstSetWidth = scrollContent.scrollWidth / 2;
+        
+        // Reset position when we've scrolled through one complete set
+        if (scrollPosition >= firstSetWidth) {
+          scrollPosition = 0;
+        }
+        
+        scrollContent.style.transform = `translateX(-${scrollPosition}px)`;
+      }
+      animationId = requestAnimationFrame(scroll);
+    };
+
+    const handleMouseEnter = () => {
+      isPaused = true;
+    };
+
+    const handleMouseLeave = () => {
+      isPaused = false;
+    };
+
+    scrollContent.addEventListener('mouseenter', handleMouseEnter);
+    scrollContent.addEventListener('mouseleave', handleMouseLeave);
+
+    animationId = requestAnimationFrame(scroll);
+
+    return () => {
+      cancelAnimationFrame(animationId);
+      scrollContent.removeEventListener('mouseenter', handleMouseEnter);
+      scrollContent.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
+
+  // Double the array for seamless infinite scroll
   const duplicatedPartners = [...mediaPartners, ...mediaPartners];
 
   return (
@@ -93,11 +141,11 @@ const SponsorSection = () => {
           {/* Infinite Scroll Carousel */}
           <div className="relative w-full mx-auto overflow-hidden">
             <div className="scroll-container">
-              <div className="scroll-content">
+              <div ref={scrollRef} className="scroll-content">
                 {duplicatedPartners.map((partner, idx) => (
                   <div
                     key={`${partner.name}-${idx}`}
-                    className="group relative flex-shrink-0 flex items-center justify-center mx-6 md:mx-8 lg:mx-12"
+                    className="scroll-item group relative flex-shrink-0 flex items-center justify-center"
                   >
                     {/* Glow Effect */}
                     <div 
@@ -132,19 +180,18 @@ const SponsorSection = () => {
 
         .scroll-content {
           display: flex;
-          animation: scroll 30s linear infinite;
+          will-change: transform;
         }
 
-        .scroll-content:hover {
-          animation-play-state: paused;
+        .scroll-item {
+          padding: 0 3rem;
+          min-width: 200px;
         }
 
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
+        @media (max-width: 768px) {
+          .scroll-item {
+            padding: 0 2rem;
+            min-width: 150px;
           }
         }
       `}</style>
